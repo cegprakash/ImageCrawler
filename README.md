@@ -29,7 +29,7 @@ sudo pip3 install pipenv
 
 ###### Make sure you run this from the project folder
 ```
-pipenv --python 3.5.2 (or) pipenv --three
+pipenv --three
 ```
 
 #### Activate the virtual environment:
