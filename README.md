@@ -1,22 +1,24 @@
 ## Uses
 
 1. `Python 3.7.3`
+2. `MySql 5.7.25`
 
 ## Installing
 
-#### Install the primary requirements
-
 
 #### Python Setup
-[Download and install](https://www.python.org/downloads)
 
+[Download and install python3](https://www.python.org/downloads)
+
+#### MySQL Installation
+```sudo apt-get install mysql-server```
+(or)
+[MySQL Windows MSI Installer](https://dev.mysql.com/downloads/windows/installer/5.7.html)
 
 
 ### Install pip3
 
-```
-sudo apt-get install python3-pip
-```
+```sudo apt-get install python3-pip``` (or) [Python pip for windows](https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation)
 
 #### Install pipenv. 
 ###### pipenv automatically creates and manages a virtual environment for the project.
@@ -47,12 +49,10 @@ sudo pipenv install -r requirements.txt
 
 #### Start the database services:
 
-```
+```service mysqld start``` (or) ```net start MySQL```
 
-```
 ### API Documentation
 ```
-http://localhost:8000/docs
 ```
 
 ### Running the server
