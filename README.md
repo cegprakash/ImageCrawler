@@ -7,7 +7,7 @@
 #### Install the primary requirements
 
 
-####Python Setup
+#### Python Setup
 [Download and install](https://www.python.org/downloads)
 
 
@@ -19,7 +19,7 @@ sudo apt-get install python3-pip
 ```
 
 #### Install pipenv. 
-######pipenv automatically creates and manages a virtual environment for the project.
+###### pipenv automatically creates and manages a virtual environment for the project.
 
 ```
 sudo pip3 install pipenv
