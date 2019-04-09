@@ -9,6 +9,7 @@
 #### Python Setup
 
 [Download and install python3](https://www.python.org/downloads)
+(Make sure to install 64-bit version)
 
 #### MySQL Installation
 ```sudo apt-get install mysql-server```
@@ -51,13 +52,20 @@ sudo pipenv install -r requirements.txt
 
 ```service mysqld start``` (or) ```net start MySQL```
 
-### API Documentation
+
+### Load initial schema
+
 ```
+python3 manage.py migrate
 ```
 
 ### Running the server
 ```
 python3 manage.py runserver --noreload
+```
+
+### API Documentation
+```
 ```
 
 #### Deployment
@@ -67,13 +75,6 @@ python3 manage.py runserver --noreload
 ### Running tests
 ```
 python3 manage.py test
-```
-
-
-### Load initial schema
-
-```
-python3 manage.py generate_schema
 ```
 
 
