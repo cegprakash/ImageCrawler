@@ -1,4 +1,4 @@
-from crawler.managers.crawl_manager import CrawlManager
+from crawler.managers.baseurl_manager import BaseUrlManager
 
 
 class CrawlService:
@@ -6,10 +6,8 @@ class CrawlService:
     @classmethod
     def execute(cls, data):
         try:
-            print(data['url'])
-            print(data['depth'])
-            # res = CrawlManager.reset_password(data['user_id'], data['code'], make_password(data['password'], None))
-            return True, ""
+            success, result = BaseUrlManager.add_url(data['url'], data['depth'])
+            return success, result
         except Exception as e:
             return False, str(e)
 

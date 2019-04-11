@@ -23,6 +23,6 @@ schema_view = get_swagger_view(title='Pastebin API')
 
 urlpatterns = [
     path(r'', schema_view),
-    path(r'admin/', admin.site.urls),
+    #path(r'admin/', admin.site.urls),
     path(r'crawl/', CrawlerView.as_view())
 ]

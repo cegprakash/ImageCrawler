@@ -27,6 +27,7 @@ django-cors-headers = "*"
 django-cors-middleware = "*"
 Jinja2 = "==2.10.1"
 MarkupSafe = "==1.1.1"
+schedule = "*"
 
 [requires]
 python_version = "3.7"

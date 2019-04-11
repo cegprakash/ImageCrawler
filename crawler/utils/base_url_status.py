@@ -2,5 +2,6 @@ from enum import IntEnum
 
 
 class BaseUrlStatus(IntEnum):
-    active = 0
-    deleted = 1
+    unprocessed = 0
+    processed = 1
+    deleted = 2

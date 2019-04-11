@@ -64,8 +64,14 @@ python3 manage.py migrate
 python3 manage.py runserver --noreload
 ```
 
+### Running the background tasks
+```
+python3 CronJobs/process.py
+```
+
 ### API Documentation
 ```
+http://localhost:8000
 ```
 
 #### Deployment

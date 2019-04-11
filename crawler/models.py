@@ -1,2 +1,2 @@
-from crawler.submodels.baseurl import *
-from crawler.submodels.images import *
+from crawler.submodels.baseurl import BaseUrl
+from crawler.submodels.images import ImageUrl

@@ -19,7 +19,7 @@ class CrawlerView(generics.GenericAPIView):
         success, data = CrawlService.execute(serializer.validated_data)
 
         if success:
-            return Response.success_response(message=data, code=status.HTTP_201_CREATED)
+            return Response.success_response(message="created", data=data, code=status.HTTP_201_CREATED)
         else:
             return Response.error_response(
                 message=data['message'] if 'message' in data else None,
