@@ -94,5 +94,5 @@ python3 manage.py test
 
 ### Selenium dependency
 ```
-The application uses ChromeDriver to crawl the webpapges
+The application uses ChromeDriver to navigate the webpapges
 ```
