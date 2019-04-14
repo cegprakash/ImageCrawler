@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'ImageCrawler',
     'crawler',
+    'CronJobs',
     'corsheaders'
 ]
 

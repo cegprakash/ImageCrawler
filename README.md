@@ -64,9 +64,9 @@ python3 manage.py migrate
 python3 manage.py runserver --noreload
 ```
 
-### Running the background tasks
+### Running the background tasks (crawls in the background)
 ```
-python3 CronJobs/process.py
+python3 manage.py process
 ```
 
 ### API Documentation
@@ -76,7 +76,15 @@ http://localhost:8000
 
 #### Deployment
 ```
+To be updated
 ```
+
+
+#### Pagination
+```
+add ?page=1 to the url
+```
+
 
 ### Running tests
 ```
@@ -84,3 +92,7 @@ python3 manage.py test
 ```
 
 
+### Selenium dependency
+```
+The application uses ChromeDriver to crawl the webpapges
+```

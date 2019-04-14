@@ -2,28 +2,22 @@ from django.core.paginator import Paginator
 from django.db import models
 
 from ImageCrawler.utils.common import get_dict
-from crawler.submodels.baseurl import BaseUrl
-from crawler.utils.base_url_status import BaseUrlStatus
+from crawler.submodels.images import ImageUrl
 
 
-class BaseUrlManager(models.Manager):
+class ImagesManager(models.Manager):
 
     @classmethod
-    def add_url(cls, url, depth):
-        result = BaseUrl()
-        result.base_url = url
-        result.depth = depth
+    def add_url(cls, image_url, base_url_obj):
+        result = ImageUrl()
+        result.base_url_id = base_url_obj
+        result.image_url = image_url
         result.save()
         return True, result.id
 
     @classmethod
-    def get_url_to_process(cls):
-        data = BaseUrl.objects.filter(status=BaseUrlStatus.unprocessed).order_by('updated_at').first()
-        return data
-
-    @classmethod
-    def get_urls(cls, request):
-        data = BaseUrl.objects.all()
+    def get_urls(cls, request, id):
+        data = ImageUrl.objects.filter(base_url_id=id)
         paginator = Paginator(data, 20)  # Show 20 urls per page
         page = request.GET.get('page')
         results = paginator.get_page(page)
@@ -38,4 +32,5 @@ class BaseUrlManager(models.Manager):
         data['results_per_page'] = paginator.per_page
         data['data'] = converted
 
+        print(data)
         return True, data
