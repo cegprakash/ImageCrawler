@@ -94,5 +94,5 @@ python3 manage.py test
 
 ### Selenium dependency
 ```
-The application uses ChromeDriver to navigate the webpapges
+The application uses headless ChromeDriver of Selenium to open the webpages and parse the urls from it.
 ```
